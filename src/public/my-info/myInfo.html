@@ -1,0 +1,16 @@
+<div class="container">
+  <div ng-if="myInfoController.registered == false">
+    <p>Not Signed Up Yet.<a ui-sref="public.signUp"> Sign up Now! </a></p>
+  </div>
+  <div ng-if="myInfoController.registered == true">
+    <div class="col-md-6">
+      <p class="text-center">First name: {{myInfoController.registeredUser.firstName}}</p>
+      <p class="text-center">Last name: {{myInfoController.registeredUser.lastName}}</p>
+      <p class="text-center">Email address: {{myInfoController.registeredUser.email}}</p>
+      <p class="text-center">Phone number: {{myInfoController.registeredUser.phone}}</p>
+    </div>
+    <menu-item
+       menu-item="myInfoController.favouriteDish">
+    </menu-item>
+  </div>
+</div>
